@@ -21,7 +21,7 @@ function fish_title
 
     # Calculate exact centered padding for Kitty macOS titlebar
     set -l title_len (string length -- $raw_title)
-    set -l pad (math "max(0, floor($COLUMNS / 2 - 18 - $title_len / 2))")
+    set -l pad (math "max(0, floor($COLUMNS * 3 / 7 - 8 - $title_len * 0.33))")
     set -l blank (printf "\u2800")
     set -l spaces (string repeat -n $pad $blank)
     echo -- "$spaces$raw_title"
