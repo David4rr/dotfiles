@@ -37,7 +37,7 @@ This setup solves it cleanly:
 - **Inside tmux:** Automatically recalculates window width (`#{client_width}`) and centers the title string in real time on window resize:
   ```tmux
   set -g set-titles on
-  set -g set-titles-string "#{R:⠀,#{e|-:#{e|/:#{e|*:#{client_width},3},7},10}}tmux ~"
+  set -g set-titles-string "#{R:⠀,#{e|-:#{e|/:#{e|*:#{client_width},2},5},1}}tmux ~"
   ```
 - **Outside tmux (Fish):** Handled via `~/.config/fish/functions/fish_title.fish` dynamically using `$COLUMNS`.
 
